@@ -110,7 +110,7 @@ data3 = DeviceInput().open_and_parse_file("data_feb_2023/data.txt")
 
 data4 = PyquilInput().open_and_parse_file("one.txt", "target.txt")
 
-pyquil_location = "../qiskit_playground/out"
+pyquil_location = "../pyquil_playground/out"
 files = os.listdir(pyquil_location)
 data_pquil = {f[:-9]: PyquilInput().open_and_parse_file(pyquil_location+"/"+f, pyquil_location+"/"+f[:-9] + "_target.txt") for f in files if not f.endswith("target.txt")}
 
